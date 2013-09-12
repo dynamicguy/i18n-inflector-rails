@@ -124,7 +124,7 @@ special meaning with a symbol:
 Second way is to use other parser by adding to +config/boot.rb+:
 
   require 'yaml'
-  YAML::ENGINE.yamler = 'syck'
+  YAML::ENGINE.yamler = 'psych'
 
 == Requirements
 

@@ -8,7 +8,7 @@ $:.unshift lib unless $:.include?(lib)
 require 'i18n-inflector-rails/version'
 
 if !defined?(YAML::ENGINE).nil? && YAML::ENGINE.respond_to?(:yamler)
-  YAML::ENGINE.yamler = 'syck'
+  YAML::ENGINE.yamler = 'psych'
 end
 
 Gem::Specification.new do |s|
@@ -30,8 +30,8 @@ Gem::Specification.new do |s|
   s.specification_version = 3
 
   s.add_dependency 'i18n-inflector',          '~> 2.6'
-  s.add_dependency 'railties',                '~> 3.0'
-  s.add_dependency 'actionpack',              '~> 3.0'
+  s.add_dependency 'railties',                '~> 4.0.0'
+  s.add_dependency 'actionpack',              '~> 4.0.0'
   s.add_development_dependency 'rspec',       '>= 2.6.0'
   s.add_development_dependency 'yard',        '>= 0.7.2'
   s.add_development_dependency 'bundler',     '>= 1.0.10'
